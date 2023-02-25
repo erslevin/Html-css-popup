@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  /*  background: linear-gradient(120deg, #3FBFAF, #ADC5D4); */ /* MARINE VERSION*/
+    background: linear-gradient(120deg, #344C5C, #647D94);
+    font-family: "Fira Code Retina", sans-serif;
+    height: 100vh;
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    background: #f5f5f5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.button-container button:hover {
+    background: #aaaaaa;
+    color: #EEE;
+    border: 1px solid #344C5C;
+}
+
+.popup {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 400ms,
+                opacity 400ms ease-in-out 0ms,
+                transform 400ms ease-in-out 0ms;
+}
+
+.popup.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+    opacity 400ms ease-in-out 0ms,
+    transform 400ms ease-in-out 0ms;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 30px;
+    background: #647D94;
+    color: #EEE;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.85);
+}
+
+.popup .close-btn:hover {
+    background-color: #344C5C;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.95);
+}
+
+.popup .form-container h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+
+.popup .form-container .form-element {
+    margin: 15px 0;
+}
+
+.popup .form-container .form-element label {
+    font-size: 14px;
+    color: #222222;
+}
+
+.popup .form-container .form-element input[type="text"],
+.popup .form-container .form-element input[type="password"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.popup .form-container .form-element input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.popup .form-container .form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #647D94;
+    color: #EEEEEE;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.85);
+}
+
+.popup .form-container .form-element button:hover {
+    background-color: #344C5C;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.95);
+}
+
+.popup .form-container .form-element a {
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: #222222;
+    text-decoration: none;
+    font-weight: 600;
+}
